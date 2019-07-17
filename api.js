@@ -3,13 +3,12 @@
 var map;
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: 43.658197, lng: -79.433820},
-    zoom: 20,
+    center: {lat:43.6593236, lng: -79.4322362},
+    zoom: 28,
     mapTypeId: 'satellite'
   });
 }
 
-function longlat(){
-  var input = document.getElementById("postal");
-  console.log(input.value);
-}
+window.addEventListener("click", () => {
+  console.log("You jsut clicked");
+})

@@ -2,7 +2,7 @@
  * element that contains the map. */
 #map {
   height: 100%;
-  margin-top: 10%;
+  margin-top: 0%;
 }
 /* Optional: Makes the sample page fill the window. */
 html, body {
