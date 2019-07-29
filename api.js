@@ -3,12 +3,14 @@
 var map;
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat:43.6593236, lng: -79.4322362},
+    center: {lat:47.4649829, lng: -52.9220728},
     zoom: 28,
     mapTypeId: 'satellite'
   });
 }
 
+
+
 window.addEventListener("click", () => {
-  console.log("You jsut clicked");
+  console.log("You just clicked");
 })
