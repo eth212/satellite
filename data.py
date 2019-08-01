@@ -15,7 +15,7 @@ lngmin = postalDF["lng"].min()
 lngmax = postalDF["lng"].max()
 latmin = postalDF["lat"].min()
 latmax = postalDF["lat"].max()
-print(lngmin, lngmax, latmin, latmax)
+
 
 latvals = np.linspace(latmin, latmax, 793815)
 lngvals = np.linspace(lngmin, lngmax, 793815)
@@ -23,3 +23,6 @@ lngvals = np.linspace(lngmin, lngmax, 793815)
 
 
 plt.scatter(postalDF["lng"], postalDF["lat"], c="r")
+
+howLong = data["PostCode"]
+print(len(howLong))
