@@ -14,9 +14,7 @@ Sub getGroupings()
     z8_lat = 2.3552
     z7_lat = 4.7104
     z6_lat = 9.4208
-
-
-
+    
     z19_long = 0.00178
     z18_long = 0.00356
     z17_long = 0.00712
@@ -31,8 +29,6 @@ Sub getGroupings()
     z8_long = 3.64544
     z7_long = 7.29088
     z6_long = 14.58176
-
-
     buffer = 2
 
     For k = 4 To 100000
@@ -223,12 +219,6 @@ Sub getGroupings()
 
             End If
         Next k
-
-
-
-
-
-
 End Sub
 
 Sub dimensions()
@@ -249,9 +239,6 @@ Sub dimensions()
     z8_lat = 2.3552
     z7_lat = 4.7104
     z6_lat = 9.4208
-
-
-
     z19_long = 0.00178
     z18_long = 0.00356
     z17_long = 0.00712
@@ -266,7 +253,6 @@ Sub dimensions()
     z8_long = 3.64544
     z7_long = 7.29088
     z6_long = 14.58176
-
 
     For counter = 2 To 100000
         If ThisWorkbook.Worksheets(2).Range("J" & counter).Value = 19 Then
@@ -338,11 +324,6 @@ Sub dimensions()
 
             ThisWorkbook.Worksheets(2).Range("K" & counter).Value = Round(((ThisWorkbook.Worksheets(2).Range("H" & counter).Value) / z6_lat) * 640)
             ThisWorkbook.Worksheets(2).Range("L" & counter).Value = Round(((ThisWorkbook.Worksheets(2).Range("I" & counter).Value) / z6_long) * 640)
-
        End If
-
     Next counter
-
-
-
 End Sub

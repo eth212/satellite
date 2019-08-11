@@ -3,8 +3,6 @@ Sub DataGetter()
     Dim lineS As Variant
     Dim NElengthRight, NElengthLeft, SWlengthRight, SWlengthLeft As Variant
 
-
-
     ' to make sure that the program continues to run on non ok statuses
     On Error Resume Next
     'Application.ScreenUpdating = False
@@ -46,14 +44,10 @@ Sub DataGetter()
             ThisWorkbook.Worksheets(1).Range("g" & j) = buffer5
             ThisWorkbook.Worksheets(1).Range("h" & j) = buffer6
 
-
-
-
             'Application.Wait (Now + TimeValue("0:00:01"))
         Next j
 
     End With
     'Application.ScreenUpdating = True
-
 
 End Sub
