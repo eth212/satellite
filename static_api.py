@@ -15,7 +15,7 @@ proxies = {
 
 buffer = pd.read_csv("training1.csv")
 data = pd.DataFrame(buffer)
-last_index = data[data['PostCode']=='E5E1S9'].index.values.astype(int)[0]
+last_index = data[data['PostCode']=='E5H1E7'].index.values.astype(int)[0]
 amount = np.linspace(0,77, 7771)
 position = data.iloc[0:last_index, 1].nunique()
 print(position)
@@ -31,7 +31,7 @@ def runApi(current_position, target):
         zoom = str(data.iloc[i, 9])
         height = str(data.iloc[i, 10])
         width = str(data.iloc[i, 11])
-        query = "https://maps.googleapis.com/maps/api/staticmap?center=" + centroid_lat  + ","  + centroid_long + "&zoom=" + zoom + "&size=" + width + "x" + height + "&scale=2&maptype=satellite&key= "
+        query = "https://maps.googleapis.com/maps/api/staticmap?center=" + centroid_lat  + ","  + centroid_long + "&zoom=" + zoom + "&size=" + width + "x" + height + "&scale=2&maptype=satellite&key="
 
         try:
             response = requests.get(query, headers=headers, stream=True)
@@ -41,7 +41,7 @@ def runApi(current_position, target):
 
         except requests.ConnectionError as e:
             print(e)
-            sys.exit(1)
+            sys.exit(0)
 
 
 
