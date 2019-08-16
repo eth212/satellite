@@ -31,7 +31,7 @@ def runApi(current_position, target):
         zoom = str(data.iloc[i, 9])
         height = str(data.iloc[i, 10])
         width = str(data.iloc[i, 11])
-        query = "https://maps.googleapis.com/maps/api/staticmap?center=" + centroid_lat  + ","  + centroid_long + "&zoom=" + zoom + "&size=" + width + "x" + height + "&scale=2&maptype=satellite&key="
+        query = "https://maps.googleapis.com/maps/api/staticmap?center=" + centroid_lat  + ","  + centroid_long + "&zoom=" + zoom + "&size=" + width + "x" + height + "&scale=2&maptype=satellite&key= "
 
         try:
             response = requests.get(query, headers=headers, stream=True)
